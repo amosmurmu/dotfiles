@@ -6,11 +6,22 @@ if [ ! -d "$HOME/dotfiles" ]; then
     git clone "$DOTFILES_REPO" "$HOME/dotfiles"
 fi
 
-ln -sf "$HOME/dotfiles/nvim" "$HOME/.config/nvim"
-
 ln -sf "$HOME/dotfiles/.bashrc" "$HOME/.bashrc"
 ln -sf "$HOME/dotfiles/.zshrc" "$HOME/.zshrc"
 ln -sf "$HOME/dotfiles/.gitconfig" "$HOME/.gitconfig"
+
+echo "basic shell config done"
+
+ln -sf "$HOME/dotfiles/nvim" "$HOME/.config/nvim"
+
+DOTFILES="$HOME/dotfiles"
+
+# Tmux config
+ln -sf "$DOTFILES/tmux/.tmux.conf" "$HOME/.tmux.conf"
+mkdir -p "$HOME/.tmux/plugins"
+ln -sf "$DOTFILES/tmux/tpm" "$HOME/.tmux/plugins/tpm"
+
+echo "Tmux setup complete"
 
 # Function to install Neovim on Debian
 install_debian() {

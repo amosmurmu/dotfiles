@@ -78,6 +78,10 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git
+  fzf
+  zsh-autosuggestions
+  zsh-bat
+  zsh-syntax-highlighting
   z)
 
 source $ZSH/oh-my-zsh.sh
@@ -110,9 +114,12 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 alias c="clear"
 alias lg="lazygit"
+alias rcowsay="cowsay | lolcat"
+alias ls="exa --icons"
 # alias zshconfig="mate ~/.zshrc"
+alias rm='rm -i'  # Ask before deleting
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 # Start tmux automatically if not already in a tmux session
 if command -v tmux > /dev/null && [ -z "$TMUX" ]; then
     tmux
@@ -122,3 +129,11 @@ source ~/.powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+export PATH=$PATH:~/.npm-global/bin
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Turso
+export PATH="$PATH:/home/amosmurmu/.turso"

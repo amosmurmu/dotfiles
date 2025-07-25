@@ -8,7 +8,7 @@ fi
 
 ln -sf "$HOME/dotfiles/.bashrc" "$HOME/.bashrc"
 ln -sf "$HOME/dotfiles/.zshrc" "$HOME/.zshrc"
-ln -sf "$HOME/dotfiles/.gitconfig" "$HOME/.gitconfig"
+# ln -sf "$HOME/dotfiles/.gitconfig" "$HOME/.gitconfig"
 
 echo "basic shell config done"
 

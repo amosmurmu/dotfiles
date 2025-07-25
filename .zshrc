@@ -115,9 +115,37 @@ source $ZSH/oh-my-zsh.sh
 alias c="clear"
 alias lg="lazygit"
 alias rcowsay="cowsay | lolcat"
-alias ls="exa --icons"
+
+# Git Aliases
+alias g='git'
+alias ga='git add'
+alias gaa='git add .'
+alias gb='git branch'
+alias gba='git branch -a'
+alias gc='git commit -m'
+alias gca='git commit --amend'
+alias gco='git checkout'
+alias gcb='git checkout -b'
+alias gd='git diff'
+alias gds='git diff --staged'
+alias gf='git fetch'
+alias gm='git merge'
+alias gps='git push'
+alias gpsf='git push --force'
+alias gr='git remote -v'
+alias grm='git rm'
+alias gcl='git clone'
+alias gst='git status'
+alias gsta='git stash'
+alias gstp='git stash pop'
+alias gsts='git stash show --text'
+alias gundo='git reset --soft HEAD~1'
+# alias ls="exa --icons"
 # alias zshconfig="mate ~/.zshrc"
 alias rm='rm -i'  # Ask before deleting
+
+# Unalias to avoid conflict
+
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 # Start tmux automatically if not already in a tmux session

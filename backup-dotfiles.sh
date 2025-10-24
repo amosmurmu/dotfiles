@@ -14,6 +14,7 @@ FILES_TO_BACKUP="
 .tmux.conf
 .tmux
 .config/nvim
+.vimrc
 "
 
 for file in $FILES_TO_BACKUP; do
@@ -31,3 +32,6 @@ done
 
 echo "✅ Backup complete."
 echo "🗃️  All files saved in: $BACKUP_DIR"
+echo
+echo "📊 Total files backed up: $(find "$BACKUP_DIR" -type f | wc -l)"
+

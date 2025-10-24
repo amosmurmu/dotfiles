@@ -15,8 +15,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
-
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -114,7 +114,13 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 alias c="clear"
 alias lg="lazygit"
-alias rcowsay="cowsay | lolcat"
+# alias rcowsay="cowsay | lolcat"
+# alias rcowsay='cowsay "$@" | lolcat'
+
+rcowsay() {
+    cowsay "$@" | lolcat
+}
+
 alias ls="exa --icons"
 # alias zshconfig="mate ~/.zshrc"
 alias rm='rm -i'  # Ask before deleting
@@ -124,8 +130,8 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 if command -v tmux > /dev/null && [ -z "$TMUX" ]; then
     tmux
 fi
-
-source ~/.powerlevel10k/powerlevel10k.zsh-theme
+# sudo ntpdate -s time.windows.com >/dev/null 2>&1 || true
+# source ~/.powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -137,3 +143,4 @@ export NVM_DIR="$HOME/.nvm"
 
 # Turso
 export PATH="$PATH:/home/amosmurmu/.turso"
+export PATH=$PATH:$(go env GOPATH)/bin

@@ -12,9 +12,12 @@ PROMPT_COMMAND="history -a; history -n"
 
 # enable bash completion
 if [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
+  . /etc/bash_completion
 fi
 
 # Alias definitions.
 alias ll='ls -la'
+alias c='clear'
 . "$HOME/.cargo/env"
+
+. "$HOME/.local/bin/env"

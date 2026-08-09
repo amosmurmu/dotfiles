@@ -141,6 +141,19 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# Setting $EDITOR env
+export EDITOR="nvim"
+
+# Add VS Code to PATH if not already there
+export PATH="$PATH:/mnt/c/Users/Lenovo/AppData/Local/Programs/Microsoft VS Code/bin"
+
 # Turso
 export PATH="$PATH:/home/amosmurmu/.turso"
 export PATH=$PATH:$(go env GOPATH)/bin
+
+. "$HOME/.local/bin/env"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+alias fd=fdfind

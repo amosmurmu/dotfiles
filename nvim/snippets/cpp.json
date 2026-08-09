@@ -1,0 +1,18 @@
+{
+  "Competitive Programming Template": {
+    "prefix": "cpptemplate",
+    "body": [
+      "#include <bits/stdc++.h>",
+      "using namespace std;",
+      "",
+      "int main() {",
+      "    ios_base::sync_with_stdio(false);",
+      "    cin.tie(nullptr);",
+      "    ",
+      " $0 ",
+      "    return 0;",
+      "}"
+    ],
+    "description": "Boilerplate template for competitive programming"
+  }
+}
